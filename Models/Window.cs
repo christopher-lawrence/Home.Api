@@ -2,11 +2,11 @@ using System;
 
 namespace Home.Api
 {
-    public class LightBulb : IHaveId
+    public class Window : IDimensions, IHaveId
     {
         private Guid _id;
-        private LightBulbType _type;
-        private string _size;
+        private int _height;
+        private int _width;
 
         private Guid _roomId;
         private Room _room;
@@ -47,29 +47,27 @@ namespace Home.Api
             }
         }
 
-        public LightBulbType Type
+        public int Height
         {
             get
             {
-                return _type;
+                return _height;
             }
             set
             {
-                _type = value;
+                _height = value;
             }
         }
-
-        public string Size
+        public int Width
         {
             get
             {
-                return _size;
+                return _width;
             }
             set
             {
-                _size = value;
+                _width = value;
             }
         }
-
     }
 }

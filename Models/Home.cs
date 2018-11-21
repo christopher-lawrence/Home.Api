@@ -1,12 +1,39 @@
+using System;
 using System.Collections.Generic;
 
 namespace Home.Api
 {
-    public class Home
+    public class Home : IHaveId
     {
-        private IEnumerable<Room> _rooms;
+        private Guid _id;
+        private string _name;
+        private List<Room> _rooms;
 
-        public IEnumerable<Room> Rooms
+        public Guid Id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = value;
+            }
+        }
+
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                _name = value;
+            }
+        }
+
+        public List<Room> Rooms
         {
             get
             {

@@ -1,16 +1,58 @@
+using System;
 using System.Collections.Generic;
 
 namespace Home.Api
 {
-    public class Room
+    public class Room : IDimensions, IHaveId
     {
+        private Guid _id;
         private int _height;
         private int _width;
         private int _length;
-        private IEnumerable<LightBulb> _lightBulbs;
-        private IEnumerable<string> _colors;
+        private string _name;
+        private List<LightBulb> _lightBulbs;
+        private List<string> _colors;
+        private List<Window> _windows;
 
-        //TODO: Add windows
+        /** Relations */
+        private Guid _homeId;
+        private Home _home;
+
+        public Guid Id
+        {
+            get
+            {
+                return _id;
+            }
+            set
+            {
+                _id = value;
+            }
+        }
+
+        public Guid HomeId
+        {
+            get
+            {
+                return _homeId;
+            }
+            set
+            {
+                _homeId = value;
+            }
+        }
+
+        public Home Home
+        {
+            get
+            {
+                return _home;
+            }
+            set
+            {
+                _home = value;
+            }
+        }
 
         public int Height
         {
@@ -48,7 +90,19 @@ namespace Home.Api
             }
         }
 
-        public IEnumerable<LightBulb> LightBulbs
+        public string Name
+        {
+            get
+            {
+                return _name;
+            }
+            set
+            {
+                _name = value;
+            }
+        }
+
+        public List<LightBulb> LightBulbs
         {
             get
             {
@@ -60,7 +114,7 @@ namespace Home.Api
             }
         }
 
-        public IEnumerable<string> Colors
+        public List<string> Colors
         {
             get
             {
@@ -71,5 +125,18 @@ namespace Home.Api
                 _colors = value;
             }
         }
+
+        public List<Window> Windows
+        {
+            get
+            {
+                return _windows;
+            }
+            set
+            {
+                _windows = value;
+            }
+        }
+
     }
 }
