@@ -5,7 +5,7 @@ namespace Home.Api
 {
     public class Home : IHaveId
     {
-        private Guid _id;
+        private Guid _id = Guid.NewGuid();
         private string _name;
         private List<Room> _rooms = new List<Room>();
 

@@ -4,7 +4,7 @@ namespace Home.Api
 {
     public class LightBulb : IHaveId
     {
-        private Guid _id;
+        private Guid _id = Guid.NewGuid();
         private LightBulbType _type;
         private string _size;
 

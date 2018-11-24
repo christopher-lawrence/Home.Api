@@ -4,7 +4,7 @@ namespace Home.Api
 {
     public class Door : IHaveId, IDimensions, IHaveColor
     {
-        private Guid _id;
+        private Guid _id = Guid.NewGuid();
         private int _height;
         private int _width;
         private string _colorName;

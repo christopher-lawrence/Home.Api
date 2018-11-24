@@ -5,7 +5,7 @@ namespace Home.Api
 {
     public class Room : IDimensions, IHaveId
     {
-        private Guid _id;
+        private Guid _id = Guid.NewGuid();
         private int _height;
         private int _width;
         private int _length;
