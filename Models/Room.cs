@@ -14,6 +14,7 @@ namespace Home.Api
         private List<IHaveColor> _colors = new List<IHaveColor>();
         private List<Window> _windows = new List<Window>();
         private List<Door> _doors = new List<Door>();
+        private Floor _floor = new Floor();
 
         /** Relations */
         private Guid _homeId;
@@ -28,6 +29,7 @@ namespace Home.Api
         public List<IHaveColor> Colors { get => _colors; set => _colors = value; }
         public List<Window> Windows { get => _windows; set => _windows = value; }
         public List<Door> Doors { get => _doors; set => _doors = value; }
+        public Floor Floor { get => _floor; set => _floor = value; }
 
         // Relationships
         public Guid HomeId { get => _homeId; set => _homeId = value; }

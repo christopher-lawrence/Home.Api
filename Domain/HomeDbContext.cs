@@ -24,6 +24,10 @@ namespace Home.Api
             modelBuilder.Entity<Door>()
                 .HasOne(p => p.Room)
                 .WithMany(p => p.Doors);
+
+            modelBuilder.Entity<Floor>()
+                .HasOne(p => p.Room)
+                .WithOne(p => p.Floor);
         }
 
         public DbSet<Home> Homes { get; set; }
@@ -31,5 +35,6 @@ namespace Home.Api
         public DbSet<Window> Windows { get; set; }
         public DbSet<LightBulb> LightBulbs { get; set; }
         public DbSet<Door> Doors { get; set; }
+        public DbSet<Floor> Floors { get; set; }
     }
 }
