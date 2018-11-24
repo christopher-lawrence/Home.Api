@@ -2,72 +2,23 @@ using System;
 
 namespace Home.Api
 {
-    public class Window : IDimensions, IHaveId
+    public class Window : IDimensions, IHaveId, IHaveColor
     {
         private Guid _id;
         private int _height;
         private int _width;
+        private string _colorName;
+        private string _colorCode;
 
         private Guid _roomId;
         private Room _room;
 
-        public Guid Id
-        {
-            get
-            {
-                return _id;
-            }
-            set
-            {
-                _id = value;
-            }
-        }
-
-        public Guid RoomId
-        {
-            get
-            {
-                return _roomId;
-            }
-            set
-            {
-                _roomId = value;
-            }
-        }
-
-        public Room Room
-        {
-            get
-            {
-                return _room;
-            }
-            set
-            {
-                _room = value;
-            }
-        }
-
-        public int Height
-        {
-            get
-            {
-                return _height;
-            }
-            set
-            {
-                _height = value;
-            }
-        }
-        public int Width
-        {
-            get
-            {
-                return _width;
-            }
-            set
-            {
-                _width = value;
-            }
-        }
+        public Guid Id { get => _id; set => _id = value; }
+        public Guid RoomId { get => _roomId; set => _roomId = value; }
+        public Room Room { get => _room; set => _room = value; }
+        public int Height { get => _height; set => _height = value; }
+        public int Width { get => _width; set => _width = value; }
+        public string ColorName { get => _colorName; set => _colorName = value; }
+        public string ColorCode { get => _colorCode; set => _colorCode = value; }
     }
 }

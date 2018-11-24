@@ -10,133 +10,26 @@ namespace Home.Api
         private int _width;
         private int _length;
         private string _name;
-        private List<LightBulb> _lightBulbs;
-        private List<string> _colors;
-        private List<Window> _windows;
+        private List<LightBulb> _lightBulbs = new List<LightBulb>();
+        private List<IHaveColor> _colors = new List<IHaveColor>();
+        private List<Window> _windows = new List<Window>();
+        private List<Door> _doors = new List<Door>();
 
         /** Relations */
         private Guid _homeId;
         private Home _home;
 
-        public Guid Id
-        {
-            get
-            {
-                return _id;
-            }
-            set
-            {
-                _id = value;
-            }
-        }
-
-        public Guid HomeId
-        {
-            get
-            {
-                return _homeId;
-            }
-            set
-            {
-                _homeId = value;
-            }
-        }
-
-        public Home Home
-        {
-            get
-            {
-                return _home;
-            }
-            set
-            {
-                _home = value;
-            }
-        }
-
-        public int Height
-        {
-            get
-            {
-                return _height;
-            }
-            set
-            {
-                _height = value;
-            }
-        }
-
-        public int Width
-        {
-            get
-            {
-                return _width;
-            }
-            set
-            {
-                _width = value;
-            }
-        }
-
-        public int Length
-        {
-            get
-            {
-                return _length;
-            }
-            set
-            {
-                _length = value;
-            }
-        }
-
-        public string Name
-        {
-            get
-            {
-                return _name;
-            }
-            set
-            {
-                _name = value;
-            }
-        }
-
-        public List<LightBulb> LightBulbs
-        {
-            get
-            {
-                return _lightBulbs;
-            }
-            set
-            {
-                _lightBulbs = value;
-            }
-        }
-
-        public List<string> Colors
-        {
-            get
-            {
-                return _colors;
-            }
-            set
-            {
-                _colors = value;
-            }
-        }
-
-        public List<Window> Windows
-        {
-            get
-            {
-                return _windows;
-            }
-            set
-            {
-                _windows = value;
-            }
-        }
+        public Guid Id { get => _id; set => _id = value; }
+        public Guid HomeId { get => _homeId; set => _homeId = value; }
+        public Home Home { get => _home; set => _home = value; }
+        public int Height { get => _height; set => _height = value; }
+        public int Width { get => _width; set => _width = value; }
+        public int Length { get => _length; set => _length = value; }
+        public string Name { get => _name; set => _name = value; }
+        public List<LightBulb> LightBulbs { get => _lightBulbs; set => _lightBulbs = value; }
+        public List<IHaveColor> Colors { get => _colors; set => _colors = value; }
+        public List<Window> Windows { get => _windows; set => _windows = value; }
+        public List<Door> Doors { get => _doors; set => _doors = value; }
 
     }
 }

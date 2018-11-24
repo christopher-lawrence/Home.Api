@@ -8,68 +8,14 @@ namespace Home.Api
         private LightBulbType _type;
         private string _size;
 
+        // Relationships
         private Guid _roomId;
         private Room _room;
 
-        public Guid Id
-        {
-            get
-            {
-                return _id;
-            }
-            set
-            {
-                _id = value;
-            }
-        }
-
-        public Guid RoomId
-        {
-            get
-            {
-                return _roomId;
-            }
-            set
-            {
-                _roomId = value;
-            }
-        }
-
-        public Room Room
-        {
-            get
-            {
-                return _room;
-            }
-            set
-            {
-                _room = value;
-            }
-        }
-
-        public LightBulbType Type
-        {
-            get
-            {
-                return _type;
-            }
-            set
-            {
-                _type = value;
-            }
-        }
-
-        public string Size
-        {
-            get
-            {
-                return _size;
-            }
-            set
-            {
-                _size = value;
-            }
-        }
-
+        public Guid Id { get => _id; set => _id = value; }
+        public Guid RoomId { get => _roomId; set => _roomId = value; }
+        public Room Room { get => _room; set => _room = value; }
+        public LightBulbType Type { get => _type; set => _type = value; }
+        public string Size { get => _size; set => _size = value; }
     }
 }
