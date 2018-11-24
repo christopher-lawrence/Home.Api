@@ -20,8 +20,6 @@ namespace Home.Api
         private Home _home;
 
         public Guid Id { get => _id; set => _id = value; }
-        public Guid HomeId { get => _homeId; set => _homeId = value; }
-        public Home Home { get => _home; set => _home = value; }
         public int Height { get => _height; set => _height = value; }
         public int Width { get => _width; set => _width = value; }
         public int Length { get => _length; set => _length = value; }
@@ -31,5 +29,8 @@ namespace Home.Api
         public List<Window> Windows { get => _windows; set => _windows = value; }
         public List<Door> Doors { get => _doors; set => _doors = value; }
 
+        // Relationships
+        public Guid HomeId { get => _homeId; set => _homeId = value; }
+        public Home Home { get => _home; set => _home = value; }
     }
 }

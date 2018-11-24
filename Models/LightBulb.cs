@@ -13,9 +13,11 @@ namespace Home.Api
         private Room _room;
 
         public Guid Id { get => _id; set => _id = value; }
-        public Guid RoomId { get => _roomId; set => _roomId = value; }
-        public Room Room { get => _room; set => _room = value; }
         public LightBulbType Type { get => _type; set => _type = value; }
         public string Size { get => _size; set => _size = value; }
+
+        // Relationships
+        public Guid RoomId { get => _roomId; set => _roomId = value; }
+        public Room Room { get => _room; set => _room = value; }
     }
 }

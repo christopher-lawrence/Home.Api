@@ -30,5 +30,6 @@ namespace Home.Api
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Window> Windows { get; set; }
         public DbSet<LightBulb> LightBulbs { get; set; }
+        public DbSet<Door> Doors { get; set; }
     }
 }

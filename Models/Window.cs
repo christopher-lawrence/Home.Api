@@ -10,15 +10,18 @@ namespace Home.Api
         private string _colorName;
         private string _colorCode;
 
+        // Relationships
         private Guid _roomId;
         private Room _room;
 
         public Guid Id { get => _id; set => _id = value; }
-        public Guid RoomId { get => _roomId; set => _roomId = value; }
-        public Room Room { get => _room; set => _room = value; }
         public int Height { get => _height; set => _height = value; }
         public int Width { get => _width; set => _width = value; }
         public string ColorName { get => _colorName; set => _colorName = value; }
         public string ColorCode { get => _colorCode; set => _colorCode = value; }
+
+        // Relationships
+        public Guid RoomId { get => _roomId; set => _roomId = value; }
+        public Room Room { get => _room; set => _room = value; }
     }
 }

@@ -7,7 +7,7 @@ namespace Home.Api
     {
         private Guid _id;
         private string _name;
-        private List<Room> _rooms;
+        private List<Room> _rooms = new List<Room>();
 
         public Guid Id { get => _id; set => _id = value; }
         public string Name { get => _name; set => _name = value; }
