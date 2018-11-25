@@ -11,14 +11,14 @@ namespace Home.Api
         private int _length;
         private string _name;
         private List<LightBulb> _lightBulbs = new List<LightBulb>();
-        private List<IHaveColor> _colors = new List<IHaveColor>();
+        private List<Color> _colors = new List<Color>();
         private List<Window> _windows = new List<Window>();
         private List<Door> _doors = new List<Door>();
         private Floor _floor = new Floor();
 
         /** Relations */
         private Guid _homeId;
-        private Home _home;
+        private Home _home = new Home();
 
         public Guid Id { get => _id; set => _id = value; }
         public int Height { get => _height; set => _height = value; }
@@ -26,7 +26,7 @@ namespace Home.Api
         public int Length { get => _length; set => _length = value; }
         public string Name { get => _name; set => _name = value; }
         public List<LightBulb> LightBulbs { get => _lightBulbs; set => _lightBulbs = value; }
-        public List<IHaveColor> Colors { get => _colors; set => _colors = value; }
+        public List<Color> Colors { get => _colors; set => _colors = value; }
         public List<Window> Windows { get => _windows; set => _windows = value; }
         public List<Door> Doors { get => _doors; set => _doors = value; }
         public Floor Floor { get => _floor; set => _floor = value; }
