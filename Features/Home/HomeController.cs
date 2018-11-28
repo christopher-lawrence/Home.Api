@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Home.Api.Models;
 
-namespace Home.Api.Controllers
+namespace Home.Api.Features.Home
 {
     public class HomeController : Controller
     {

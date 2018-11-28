@@ -1,6 +1,7 @@
+using Home.Api.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Home.Api
+namespace Home.Api.Domain
 {
     public class HomeDbContext : DbContext
     {
@@ -58,7 +59,7 @@ namespace Home.Api
                 .WithOne();
         }
 
-        public DbSet<Home> Homes { get; set; }
+        public DbSet<Models.Home> Homes { get; set; }
         public DbSet<Room> Rooms { get; set; }
         public DbSet<Window> Windows { get; set; }
         public DbSet<LightBulb> LightBulbs { get; set; }
