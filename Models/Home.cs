@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Home.Api
+namespace Home.Api.Models
 {
     public class Home : IHaveId
     {

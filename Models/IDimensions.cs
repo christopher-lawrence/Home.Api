@@ -1,4 +1,4 @@
-namespace Home.Api
+namespace Home.Api.Models
 {
     public interface IDimensions
     {

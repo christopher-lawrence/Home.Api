@@ -1,6 +1,6 @@
 using System;
 
-namespace Home.Api
+namespace Home.Api.Models
 {
     public class Floor : IHaveId
     {
