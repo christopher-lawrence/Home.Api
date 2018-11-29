@@ -1,3 +1,4 @@
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using Home.Api.Domain;
@@ -18,7 +19,7 @@ namespace Home.Api.Features.Home
 
     public class AddHomeHandler : IRequestHandler<AddHomeRequest, AddHomeResponse>
     {
-        private DbContext _dbContext;
+        private HomeDbContext _dbContext;
         public AddHomeHandler(HomeDbContext dbContext)
         {
             _dbContext = dbContext;
