@@ -26,8 +26,6 @@ namespace Home.Api.Features.Home
         {
             return _dbContext.Homes
                 .Include(h => h.Rooms)
-                // Necessary?
-                .ThenInclude(r => r.Floor)
                 .FirstOrDefaultAsync(h => h.Id == request.Id);
         }
     }

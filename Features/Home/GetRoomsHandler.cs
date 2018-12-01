@@ -10,12 +10,12 @@ using Microsoft.EntityFrameworkCore;
 
 namespace Home.Api.Features.Home
 {
-    public class GetRoomsRequest : IRequest<List<Room>>
+    public class GetRoomsRequest : IRequest<List<Models.Room>>
     {
         public Guid HomeId { get; set; }
     }
 
-    public class GetRoomsHandler : IRequestHandler<GetRoomsRequest, List<Room>>
+    public class GetRoomsHandler : IRequestHandler<GetRoomsRequest, List<Models.Room>>
     {
         private HomeDbContext _dbContext;
 
@@ -24,7 +24,7 @@ namespace Home.Api.Features.Home
             _dbContext = dbContext;
         }
 
-        public Task<List<Room>> Handle(GetRoomsRequest request, CancellationToken cancellationToken)
+        public Task<List<Models.Room>> Handle(GetRoomsRequest request, CancellationToken cancellationToken)
         {
             var result = _dbContext.Rooms.Include(r => r.Floor).Include(r => r.Home).Where(r => r.HomeId == request.HomeId);
             return result.ToListAsync();

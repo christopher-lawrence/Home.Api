@@ -6,12 +6,12 @@ using MediatR;
 
 namespace Home.Api.Features.Home
 {
-    public class AddRoomRequest : IRequest<Room>
+    public class AddRoomRequest : IRequest<Models.Room>
     {
-        public Room Room { get; set; }
+        public Models.Room Room { get; set; }
     }
 
-    public class AddRoomHandler : IRequestHandler<AddRoomRequest, Room>
+    public class AddRoomHandler : IRequestHandler<AddRoomRequest, Models.Room>
     {
         private HomeDbContext _dbContext;
 
@@ -20,7 +20,7 @@ namespace Home.Api.Features.Home
             _dbContext = dbContext;
         }
 
-        public async Task<Room> Handle(AddRoomRequest request, CancellationToken cancellationToken)
+        public async Task<Models.Room> Handle(AddRoomRequest request, CancellationToken cancellationToken)
         {
             var room = request.Room;
             room.Floor = new Floor
