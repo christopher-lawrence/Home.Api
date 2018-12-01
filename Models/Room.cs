@@ -14,11 +14,11 @@ namespace Home.Api.Models
         private List<Color> _colors = new List<Color>();
         private List<Window> _windows = new List<Window>();
         private List<Door> _doors = new List<Door>();
-        private Floor _floor = new Floor();
+        private Floor _floor;
 
         /** Relations */
         private Guid _homeId;
-        private Home _home = new Home();
+        private Home _home;
 
         public Guid Id { get => _id; set => _id = value; }
         public int Height { get => _height; set => _height = value; }

@@ -10,9 +10,9 @@ namespace Home.Api.Models
 
         // Relationships
         private Guid _roomId;
-        private Room _room = new Room();
+        private Room _room;
         private Guid? _colorId;
-        private Color _color = new Color();
+        private Color _color;
 
         public Guid Id { get => _id; set => _id = value; }
         public int Height { get => _height; set => _height = value; }
