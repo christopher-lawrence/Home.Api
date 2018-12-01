@@ -61,8 +61,8 @@ namespace Home.Api.Features.Home
         }
 
         [HttpPost]
-        [Route("{id}/room/add")]
-        public Task<Room> AddRoomAsync(Guid id, [FromBody]Room room)
+        [Route("{id}/rooms/add")]
+        public Task<Models.Room> AddRoomAsync(Guid id, [FromBody]Models.Room room)
         {
             if (!ModelState.IsValid)
             {
@@ -74,10 +74,16 @@ namespace Home.Api.Features.Home
 
         [HttpGet]
         [Route("{id}/rooms")]
-        public Task<List<Room>> GetRoomsAsync(Guid id)
+        public Task<List<Models.Room>> GetRoomsAsync(Guid id)
         {
             return _mediator.Send(new GetRoomsRequest { HomeId = id });
         }
 
+        [HttpDelete]
+        [Route("{id}/rooms/{roomId}")]
+        public Task DeleteRoomAsync(Guid id, Guid roomId)
+        {
+            return _mediator.Send(new DeleteRoomReqeust { HomeId = id, RoomId = roomId });
+        }
     }
 }
