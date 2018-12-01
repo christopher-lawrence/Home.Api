@@ -24,7 +24,11 @@ namespace Home.Api.Features.Home
 
         public Task<Models.Home> Handle(GetHomeRequest request, CancellationToken cancellationToken)
         {
-            return _dbContext.Homes.FirstOrDefaultAsync(h => h.Id == request.Id);
+            return _dbContext.Homes
+                .Include(h => h.Rooms)
+                // Necessary?
+                .ThenInclude(r => r.Floor)
+                .FirstOrDefaultAsync(h => h.Id == request.Id);
         }
     }
 }
