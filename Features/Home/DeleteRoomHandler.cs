@@ -25,6 +25,8 @@ namespace Home.Api.Features.Home
             var room = _dbContext.Rooms.FirstOrDefault(r => r.Id == request.RoomId && r.HomeId == request.HomeId);
             if (room != null)
             {
+                var home = _dbContext.Homes.FirstOrDefault(h => h.Id == request.HomeId);
+                home.Rooms.Remove(room);
                 _dbContext.Rooms.Remove(room);
                 await _dbContext.SaveChangesAsync();
             }
